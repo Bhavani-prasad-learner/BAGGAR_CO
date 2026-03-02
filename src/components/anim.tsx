@@ -1,0 +1,18 @@
+export const menuSlide = {
+    initial: {y: "calc(100% + 100px)"},
+    enter: {y: "0", transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1]}},
+    exit: {y: "calc(-100% - 100px)", transition: {duration: 0.9, ease: [0.76, 0, 0.24, 1]}}
+    // enter: {x: "0", transition: {duration: 3, ease: [0.24, 0.76, 0, 1]}},
+    // exit: {x: "calc(100% + 100px)", transition: {duration: 3, ease: [0.24, 0.76, 0, 1]}}
+}
+
+export const slide = {
+    initial: {x: 80},
+    enter: i => ({y: 0, transition: {duration: 1, ease: [0.24, 0.76, 0, 1], delay: 0.005 * i}}),
+    exit: i => ({y: 80, transition: {duration: 1, ease: [0.24, 0.76, 0, 1], delay: 0.005 * i}})
+}
+
+export const scale = {
+    open: {scale: 1, transition: {duration: 0.3}},
+    closed: {scale: 0, transition: {duration: 0.4}}
+}

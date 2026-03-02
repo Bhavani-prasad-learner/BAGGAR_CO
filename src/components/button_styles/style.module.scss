@@ -1,0 +1,205 @@
+.HeaderMedium{
+    display: none;
+    @media (min-width: 768px) {
+        display: flex; // Show on medium and larger screens
+      }
+}
+
+.HeaderSmall{
+    display: block; // Show by default on small screens
+
+    @media (min-width: 768px) {
+      display: none; // Hide on medium and larger screens
+      
+    }
+}
+
+
+
+.header{
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    top: 0;
+    color: rgb(31, 19, 19);
+    padding: 35px;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 300;
+    box-sizing: border-box;
+    align-items: center;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+      
+
+    .logo{
+        display: flex;
+        cursor: pointer;
+        .copyright{
+            transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+        .name{
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-left: 5px;
+            .codeBy{
+            transition:all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+            opacity:0;
+            padding:0;
+            transform: translateX(-100%);
+            }
+        }
+        // .name{
+        //     display: flex;
+        //     position: relative;
+        //     overflow: hidden;
+        //     white-space: nowrap;
+        //     margin-left: 5px;
+        //     transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        //     // p{
+        //     //     position: relative;
+        //     //     transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        //     //     &:nth-of-type(2){
+        //     //         padding-left: 0.3em;
+        //     //     }
+        //     //     &:nth-of-type(3){
+        //     //         position: absolute;
+        //     //         left: 120px;
+        //     //         padding-left: 0.3em;
+        //     //     }
+        //     // }
+           
+        // }
+        
+        &:hover{
+            .copyright{
+                transform: rotate(360deg);
+            }
+            .name{
+                padding-right: 30px;
+                .codeBy{
+                    opacity:1;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        z-index:1;
+        .el{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+            padding: 15px;
+            cursor: pointer;
+            &:hover{
+                .indicator{
+                    transform: scale(1);
+                }
+            }
+            .indicator{
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                top: 45px;
+                left: 50%;
+                background-color: rgb(31, 21, 21);
+                border-radius: 50%;
+                transform: scale(0) translateX(-50%);
+                transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+            }
+        }
+        a{
+            cursor: pointer;
+            text-decoration: none;
+            color:rgb(15, 14, 14);
+        }
+    } 
+}
+.headerButtonContainer{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding-top:2rem;
+    padding-bottom: 1rem;
+    right:3vw;
+    top:-1.5rem;
+    z-index: 20000;
+    background-color: #171717;
+     backdrop-filter: blur(10px);
+     border: 0.1px solid grey;
+     border-radius: 2.5rem;
+     height: 4.5rem;
+     width: 95vw;
+// h2 {
+//    position: absolute;
+//   left: 40%;
+//   top:25%;
+//   margin:0;
+// }
+    .button{
+        position: absolute;
+        margin: 2px;
+        right:-0%;
+        z-index: 100000;
+        width: 70px;
+        height: 40px;
+       
+        background-color: transparent;
+        // backdrop-filter: blur(10px);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .burger{
+        width: 100%;
+        position: relative;
+        z-index: 100000;
+        &::after, &::before{
+            content: "";
+            display: block;
+            height: 2px;
+            width: 40%;
+            margin: auto;
+            background-color: white;
+            position: relative;
+            transition: transform 0.3s;
+        }
+    
+        &::after{
+            top: -5px;
+        }
+    
+        &::before{
+            top: 5px;
+        }
+    }
+    
+    .burgerActive{
+    
+        &::after{
+            transform: rotate(45deg);
+            top: -1px;
+        }
+    
+        &::before{
+            transform: rotate(-45deg);
+            top: 0px;
+        }
+        
+    }
+}
