@@ -166,7 +166,7 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
           <button
             onClick={handleClose}
             className=" absolute top-[12px] right-[12px]
-                      bg-black
+                      bg-[#021f14]
                       border border-black/20
                       rounded-full
                       text-white
@@ -183,11 +183,11 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
             <X size={18} />
           </button>
 
-          <div className="auth-modal-content bg-[rgba(0,0,0,0.5)]" >
+          <div className="auth-modal-content bg-[#021f14]" >
             <img src='./webp2/bg-loginImg.webp' alt="auth-bg" className='opacity-[1] overflow-hidden w-[30rem] h-[20rem] object-cover' />
           </div>
 
-          <div className=' bg-black flex flex-col gap-3 py-10 border-t border-black/20'>
+          <div className=' bg-[#02291ad5] flex flex-col gap-3 py-10 border-t border-black/20'>
             <div className="mt-0 pt-0" />
             <span className='text-white text-center text-xl'>
               Sign in with Gmail
@@ -202,12 +202,12 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
      
           <div 
           onClick={handleGoogleSignIn}
-          className='h-12 w-14 absolute top-[53%] right-[40%] z-[100] text-4xl text-white rounded-2xl border border-[rgba(50,50,50,1)] bg-[rgba(23,23,23,1)] flex items-center justify-center'>
+          className='h-12 w-14 absolute top-[53%] right-[40%] z-[100] text-4xl text-white rounded-2xl  bg-[#02291ad5]  flex items-center justify-center'>
             <CiLogin />
 
           </div>
     
-          <div className="min-h-10 w-full bg-black flex items-center justify-center px-5 pt-2 pb-8 -mt-2">
+          <div className="min-h-10 w-full bg-[#02291ad5]  flex items-center justify-center px-5 pt-2 pb-8 -mt-2">
             <button
               onClick={handleGoogleSignIn}
               disabled={isLoading}
@@ -215,7 +215,7 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
               type="button"
             >
   
-              <span className="google-btn-text">sign in</span>
+              <span className="google-btn-text ">sign in</span>
             </button>
 
           </div>

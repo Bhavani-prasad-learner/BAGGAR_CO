@@ -421,7 +421,7 @@ const AppContent = () => {
       </div>
 
 
-      <div className="flex absolute right-0">
+      <div className="flex absolute right-0 ">
         <AnimatePresence>
           {isHeaderActive && (
             <motion.div
@@ -435,9 +435,9 @@ const AppContent = () => {
               transition={{ duration: 0.3, delay: 0.5 }}
             >
               <div className="flex relative" onClick={closeHeaderMenu}>
-                <div className="cormorant_garamond-regular text-center text-white">
-                  <h2 className="text-[1.2rem] md:text-[2.5rem] tracking-wide mb-4 mt-[0.8rem] whitespace-nowrap">
-                    THE EXOTIC SHAWARMA
+                <div className=" text-center  text-white">
+                  <h2 className="text-[1.9rem] md:text-[2.5rem] font-cinzel tracking-wide mb-4 mt-[0.8rem] whitespace-nowrap">
+                    bagaara & co.
                   </h2>
                 </div>
 

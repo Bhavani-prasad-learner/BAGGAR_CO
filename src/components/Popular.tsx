@@ -72,10 +72,10 @@ const Popular = ({ type, onMenuClick, selectedItem }) => {
   return (<>
     {/* <section className="relative pb-10 bg-[#FFFFF] text-white"> */}
 
-          <section id="Recommendations" className="relative mb-2 bg-[#171717] rounded-[2rem] pt-8 pb-8 text-white">
+          <section id="Recommendations" className="relative mb-2 bg-brand-mesh rounded-[2rem] pt-8 pb-8 text-white ">
       <div className="flex flex-col items-center justify-center">
         <h2 className="text-[2.4rem] md:text-7xl lobster-regular mb-4 whitespace-nowrap">
-                 <span className="">popular dishes</span>
+                 <span className="font-cinzel">popular dishes</span>
         </h2>
         {/* <div className="relative w-[92%] h-[79vh] mb-4 rounded overflow-hidden shadow-lg">
 

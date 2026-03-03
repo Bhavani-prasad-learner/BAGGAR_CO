@@ -115,7 +115,7 @@ const Recommendations = ({ type, onMenuClick, selectedItem }) => {
   return (<>
 
     {/* <section id="Recommendations" className="relative mb-10 bg-[#0C0B09] text-white"> */}
-    <section id="Recommendations" className="relative mb-10 bg-[#171717] rounded-[2rem] pt-8 pb-8 text-white ">
+    <section id="Recommendations" className="relative mb-10 bg-brand-mesh rounded-[2rem] pt-8 pb-8 text-white ">
 
       <div className="flex flex-col items-center justify-center">
         <h2 className="text-[2.4rem] md:text-7xl mb-4 whitespace-nowrap lobster-regular">

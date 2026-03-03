@@ -189,7 +189,7 @@ const MenuSection = ({ type, onMenuClick, selectedItem, setIsSearchActive }: Men
   }
 
   return (
-    <div id="menu" className="min-h-[60vh] relative bg-[#171717] text-white -mt-8 mb-2 rounded-[2rem] pt-10 pb-16 z-39">
+    <div id="menu" className="min-h-[60vh] relative bg-brand-mesh text-white -mt-8 mb-2 rounded-[2rem] pt-10 pb-16 z-39">
       <div className="max-w-3xl mx-auto px-4 relative">
         
         <div className="flex w-full justify-center items-center">

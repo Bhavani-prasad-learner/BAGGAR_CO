@@ -3,17 +3,17 @@ import { motion } from "framer-motion"
 const Feedback = () => {
 
     return (
-        <div className="flex flex-col relative h-[fit-content] w-full overflow-hidden mb-10  bg-transparent ">
+        <div className="flex flex-col relative h-[fit-content] w-full overflow-hidden mb-10  bg-brand-mesh ">
             <div className="ml-5 flex items-center font-medium text-restaurant-primary">
                 <span
                 
-                className="md:text-5xl">———</span><span
+                className="md:text-5xl ">———</span><span
                  style={{backgroundImage:"linear-gradient(to right, #FC2E20, #FD7F20, #FDB750,#FD7F20, #FC2E20)",
                   backgroundSize: "200% auto",
                   animation: "gradientAnimation 5s linear infinite",
                   WebkitTextFillColor: "transparent", WebkitBackgroundClip: "text"
                 }}
-                className="text-2xl md:text-5xl font-bold tracking-wide lobster-regular ml-5">enjoy your food</span>
+                className="text-2xl md:text-5xl font-cinzel tracking-wide lobster-regular ml-5">enjoy your food</span>
             </div>
             <motion.div
                 animate={{ x: [170], y: [180], rotate: [20, 4, 20] }}

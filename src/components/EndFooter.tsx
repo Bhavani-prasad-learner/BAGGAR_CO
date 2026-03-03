@@ -136,17 +136,14 @@ const EndFooter: React.FC = () => {
     // style={{ backgroundColor: "#0C0B09" }} 
     // className=" relative z-30 gap-8 flex flex-col mt-52 pb-20"
     className="pb-20 relative overflow-hidden
-    bg-[#0C0B09]
-bg-[url('/webp/bg-pattern-2.webp')]
-bg-repeat
-bg-[length:400px]
+    bg-brand-mesh
     "
     
   >
     <footer
       id="contact"
 
-      className="relative w-[100vw] text-white pt-16 pb-8 z-10 "
+      className="relative w-[100vw] text-brand-mesh pt-16 pb-8 z-10 "
 
     >
       <div className="container p-0 m-0 w-[100vw] absolute top-0">
@@ -185,42 +182,40 @@ bg-[length:400px]
 
     <div className="">
       {/* <div className="absolute opacity-30 -top-[45%] -left-[50%] scale-[0.5] h-[330vh] w-[200vw] bg-[url('/webp/bg-pattern-2.webp')] bg-repeat bg-auto bg-black z-2"></div> */}
-      <div className="absolute -top-[80%] -left-[50%] scale-[0.5] h-[350vh] w-[200vw] bg-black opacity-80 z-1"></div>
+      <div className="absolute -top-[80%] -left-[50%] scale-[0.5] h-[350vh] w-[200vw] bg-brand-mesh z-1"></div>
     </div>
     <div className="w-full flex flex-col items-center justify-center gap-3 mt-52 mb-8">
       <ChatCenteredText size={50} color="white" style={{ zIndex: "10" }} />
-      <span className="mt-2 warnes-regular text-white font-bold text-lg z-10">
+      <span className="mt-2 warnes-regular text-white font-cinzel text-lg z-10">
         about us
       </span>
-      <span className="text-gray-400 text-sm z-10">
-        Enjoy a fantastic Arabian fusion
+      <span className="text-gray-400 font-lora text-sm z-10">
+        A royal feast in every grain.
       </span>
-      <span className="text-gray-400 text-sm z-10">
-        of bold flavors
-      </span>
+      
     </div>
     <div className="w-full flex flex-col items-center justify-center gap-3 z-10 mb-8">
       <Phone size={50} color="white" style={{ zIndex: "10" }} />
-      <span className="mt-2 warnes-regular text-white font-bold text-lg z-10">
+      <span className="mt-2 warnes-regular text-white font-cinzel text-lg z-10">
         let's talk
       </span>
-      <span className="text-gray-400 text-sm z-10">
-        TheExoticShawarma@gmail.com
+      <span className="text-gray-400 text-sm z-10 font-lora">
+       bagaara&co@gmail.com
       </span>
-      <span className="text-gray-400 text-sm z-10">
+      <span className="text-gray-400 text-sm z-10 font-lora">
         000-000-000
       </span>
 
     </div>
     <div className="w-full flex flex-col items-center justify-center gap-3 z-10">
       <MapPin size={50} color="white" style={{ zIndex: "10" }} />
-      <span className="mt-2 warnes-regular text-white font-bold text-lg z-10">
+      <span className="mt-2 warnes-regular text-white font-cinzel text-lg z-10">
         contact us
       </span>
-      <span className="text-gray-400 text-sm z-10">
+      <span className="text-gray-400 text-sm z-10 font-lora">
         City : Hyderabad, India
       </span>
-      <span className="text-gray-400 text-sm z-10">
+      <span className="text-gray-400 text-sm z-10 font-lora" >
         Outlets: 8
       </span>
     </div>

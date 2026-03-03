@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,500;0,600;1,500&display=swap');
+
+
+
+
+:root {
+  --brand-green-3: #18483a;
+  --brand-green-2: #0e4537 ; /* Slightly cooler */
+  --brand-green-1: #18483a; 
+  
+  --brand-second-green-3: #1e342e;
+  --brand-second-green-2: #266e5c ; /* Slightly cooler */
+  --brand-second-green-1: #2c5c4e;
+  
+
+ 
+  --brand-gold-deep: #aa771c;   /* Darkest shadow edge */
+  --brand-gold-mid: #bf953f;    /* Mid-tone transition */
+  --brand-gold-base: #b38728;   /* The main body color */
+  --brand-gold-light: #fbf5b7;  /* Soft reflection */
+  --brand-gold-shine: #fcf6ba;  /* The brightest metallic gleam */
+
+
+  
+}
+
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -358,3 +387,45 @@ html.has-scroll-dragging {
 }
 
 
+.vedic-border-y {
+  position: relative;
+  border: none;
+}
+
+/* The Gold Stroke at the Top */
+.vedic-border-y::before,
+.vedic-border-y::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  height: 4px;
+  /* This matches the metallic gold shine from the logo */
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    #bf953f 20%, 
+    #fcf6ba 45%, 
+    #b38728 50%, 
+    #fcf6ba 55%, 
+    #aa771c 80%, 
+    transparent 100%
+  );
+  z-index: 40;
+}
+
+.vedic-border-y::before {
+  top: 2%; /* Adjusts how far from the top the line sits */
+}
+
+.vedic-border-y::after {
+  bottom: 2%; /* Adjusts how far from the bottom the line sits */
+}
+
+.vedic-border-y::before,.vedic-border-y::after {
+
+  /* Adds the diamond/pips at the ends of the line */
+  box-shadow: 
+    -5px 0 0 0 #bf953f, 
+    5px 0 0 0 #bf953f;
+}
