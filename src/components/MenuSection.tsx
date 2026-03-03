@@ -13,10 +13,10 @@ interface MenuItem {
   id: number;
   name: string;
   price: number;
-  diet: string[];       // e.g., ["veg", "non-veg"]
-  category: string[];   // e.g., ["starters", "mains", "beverages"]
-  allergens?: string[]; // e.g., ["gluten-free", "nut-free"]
-  special?: string[];   // e.g., ["best sellers", "chef's specials"]
+  diet: string[];
+  category: string[];
+  allergens?: string[];
+  special?: string[];
 }
 
 interface MenuSectionProps {
@@ -38,7 +38,6 @@ const MenuSection = ({ type, onMenuClick, selectedItem, setIsSearchActive }: Men
     { id: 9, name: "Mojitos", price: 79, diet: ["veg", "vegan"], category: ["beverages"], allergens: ["gluten-free", "dairy-free"] }
   ];
 
- 
   // --- STATE ---
   const [isFirstClicked, setIsFirstClicked] = useState(false);
   
@@ -56,64 +55,10 @@ const MenuSection = ({ type, onMenuClick, selectedItem, setIsSearchActive }: Men
     0
   );
 
-  // // --- ADVANCED ITEM-LEVEL FILTERING ---
-  // const filteredItems = menuItems.filter(item => {
-    
-  //   // 1. Quick Pill Filters Check
-  //   if (activeFilters.length > 0) {
-  //     const passesPills = activeFilters.some(filter => 
-  //       item.diet.includes(filter) || item.category.includes(filter) || item.special?.includes(filter)
-  //     );
-  //     if (!passesPills) return false;
-  //   }
-
-  //   // 2. Modal Diet Check
-  //   const selectedDiets = appliedFilters["Diet"] || [];
-  //   if (selectedDiets.length > 0) {
-  //     const hasDiet = selectedDiets.some(diet => item.diet.includes(diet));
-  //     if (!hasDiet) return false; 
-  //   }
-
-  //   // 3. Modal Category Check
-  //   const selectedCategories = appliedFilters["Category"] || [];
-  //   if (selectedCategories.length > 0) {
-  //     const hasCategory = selectedCategories.some(cat => item.category.includes(cat));
-  //     if (!hasCategory) return false;
-  //   }
-
-  //   // 4. Modal Price Check
-  //   const selectedPrices = appliedFilters["Price"] || [];
-  //   if (selectedPrices.length > 0) {
-  //     const matchesPrice = selectedPrices.some(range => {
-  //       if (range === "0-100") return item.price >= 0 && item.price <= 100;
-  //       if (range === "100-500") return item.price >= 101 && item.price <= 500;
-  //       if (range === "500-5000") return item.price >= 501 && item.price <= 5000;
-  //       return false;
-  //     });
-  //     if (!matchesPrice) return false; 
-  //   }
-
-  //   // 5. Modal Allergens Check
-  //   const selectedAllergens = appliedFilters["Allergens"] || [];
-  //   if (selectedAllergens.length > 0) {
-  //     const hasAllergen = selectedAllergens.some(allergen => item.allergens?.includes(allergen));
-  //     if (!hasAllergen) return false; 
-  //   }
-
-  //   // 6. Modal Special Check
-  //   const selectedSpecials = appliedFilters["Special"] || [];
-  //   if (selectedSpecials.length > 0) {
-  //     const hasSpecial = selectedSpecials.some(special => item.special?.includes(special));
-  //     if (!hasSpecial) return false;
-  //   }
-
-  //   return true; 
-  // });
   // --- ADVANCED ITEM-LEVEL FILTERING (OR logic for tags, AND logic for price) ---
   const filteredItems = menuItems.filter(item => {
     
     // --- 1. STRICT PRICE CHECK (AND Logic) ---
-    // If prices are selected, the item MUST fit the price. If it fails, we drop it immediately.
     const selectedPrices = appliedFilters["Price"] || [];
     if (selectedPrices.length > 0) {
       const matchesPrice = selectedPrices.some(range => {
@@ -126,13 +71,11 @@ const MenuSection = ({ type, onMenuClick, selectedItem, setIsSearchActive }: Men
     }
 
     // --- 2. TAG CHECKS (OR Logic) ---
-    // Gather all selected tags from pills and modal
     const selectedDiets = appliedFilters["Diet"] || [];
     const selectedCategories = appliedFilters["Category"] || [];
     const selectedAllergens = appliedFilters["Allergens"] || [];
     const selectedSpecials = appliedFilters["Special"] || [];
     
-    // Check if ANY tags are selected at all (excluding price)
     const hasAnyTagSelected = 
       activeFilters.length > 0 || 
       selectedDiets.length > 0 || 
@@ -140,10 +83,8 @@ const MenuSection = ({ type, onMenuClick, selectedItem, setIsSearchActive }: Men
       selectedAllergens.length > 0 || 
       selectedSpecials.length > 0;
 
-    // If no tags are selected (only price was selected, or nothing), keep the item
     if (!hasAnyTagSelected) return true;
 
-    // If tags ARE selected, the item only needs to match AT LEAST ONE of them
     const matchesQuickPill = activeFilters.some(pill => 
       item.diet.includes(pill) || item.category.includes(pill) || item.special?.includes(pill)
     );
@@ -153,12 +94,10 @@ const MenuSection = ({ type, onMenuClick, selectedItem, setIsSearchActive }: Men
     const matchesAllergen = selectedAllergens.some(allergen => item.allergens?.includes(allergen));
     const matchesSpecial = selectedSpecials.some(special => item.special?.includes(special));
 
-    // If it matches ANY of the selected tag categories, keep it!
     if (matchesQuickPill || matchesDiet || matchesCategory || matchesAllergen || matchesSpecial) {
       return true;
     }
 
-    // If it didn't match any selected tag, drop it
     return false;
   });
 
@@ -178,27 +117,52 @@ const MenuSection = ({ type, onMenuClick, selectedItem, setIsSearchActive }: Men
     }
   }
 
-  function capitalizeFirstLetter(str: string) {
-    if (str === "veg") {
-      return "Veg";
-    } else if (str === "non-veg") {
-      return "Non-Veg";
-    } else {
-      return "Drinks";
-    }
-  }
-
   return (
-    <div id="menu" className="min-h-[60vh] relative bg-brand-mesh text-white -mt-8 mb-2 rounded-[2rem] pt-10 pb-16 z-39">
+    <div id="menu" className="min-h-[60vh] font-cinzel relative bg-brand-mesh text-white -mt-8 mb-2 rounded-[2rem] pt-10 pb-16 z-39">
       <div className="max-w-3xl mx-auto px-4 relative">
         
-        <div className="flex w-full justify-center items-center">
-          <motion.h2 key={type} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className=" tracking-wide font-[700] cormorant_garamond-regular text-3xl mb-4 ">
-            <span className="text-3xl md:text-7xl font-bold tracking-wide whitespace-nowrap">
-              Our Menu
-            </span>
+        {/* ======== UPDATED TITLE HEADER ======== */}
+        <div className="flex w-full justify-center items-center mb-6">
+          <motion.h2 
+            key={type} 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            // 1. Changed to flex-col so items stack vertically
+            className="flex flex-col items-center justify-center w-full"
+          >
+            {/* 2. Added a wrapper div to keep the text and side images in a row */}
+            <div className="flex items-center justify-center gap-3 md:gap-6 w-full mb-2 md:mb-4">
+              {/* Left Decor Image
+              <img 
+                src="./side_1.png" 
+                alt="left decorative line" 
+                className="w-16 md:w-28 object-contain"
+              /> */}
+              
+              <span className="text-3xl md:text-5xl font-bold tracking-wide whitespace-nowrap font-cinzel text-[#d4af37]">
+                Our Menu
+              </span>
+              
+              {/* Right Decor Image
+              <img 
+                src="./side_2.png" 
+                alt="right decorative line" 
+                className="w-16 md:w-28 object-contain"
+              />
+             */}
+             </div>
+
+            {/* 3. The bottom border image will now sit naturally below the text */}
+            <div className="flex justify-center w-full">
+              <img 
+                src="./border_2.png" 
+                alt="bottom border line" 
+                className="w-48 md:w-80 object-contain" // Adjust widths here as needed
+              />
+            </div>
           </motion.h2>
         </div>
+        {/* ====================================== */}
 
         <div className="flex flex-row items-center gap-1 justify-center mb-2">
           

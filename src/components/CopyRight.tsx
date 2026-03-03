@@ -7,10 +7,10 @@ const CopyRight = () => {
   return (
     <div style={{backgroundColor:'[#0C0B09]'}} className="bg-brand-mesh-premium h-100 gap-5 p-12 flex flex-col vedic-border-y rounded-[2rem] items-center justify-center text-center text-sm text-gray-400 w-full z-[20] -mt-10">
       
-    {/* <span className="text-white text-[1.4rem] md:text-[4rem] md:mt-5 fugazone-regular ">
+    <span className="text-white text-[1.4rem] md:text-[4rem] md:mt-5 fugazone-regular ">
       
       <img src="./bg_logo.png" alt="logo" />
-      </span> */}
+      </span>
         <div className="flex flex-row gap-2 text-[#DFBA6B]">
             <FacebookLogo size={24} className="md:w-10 md:h-20" />
             <WhatsappLogo size={24}  className="md:w-10 md:h-20"/>
