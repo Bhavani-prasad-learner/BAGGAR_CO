@@ -49,20 +49,20 @@ export default function FoodCoverflowSlider({ images }) {
 
 
               {/* CONTENT */}
-              <div className="absolute bottom-1 left-[2%] bg-[#171717] h-36 px-4 py-2 w-[96%] rounded-xl flex flex-col justify-between">
+              <div className="absolute bottom-1 left-[2%] bg-[#c9c68f] h-36 px-4 py-2 w-[96%] rounded-xl flex flex-col justify-between">
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-md uppercase text-white font-bold  truncate">
+                  <h3 className="text-md uppercase font-cinzel text-black font-bold  truncate">
                     {item.itemName}
                   </h3>
 
-                  <div className="text-xs text-gray-400 overflow-hidden">
+                  <div className="text-xs font-lora text-gray-800 overflow-hidden">
                     {/* 4.5 <GoStar /> */}
                     {item.chefInfo}
                   </div>
 
                 </div>
                        <div className="flex justify-between items-center">
-                <span className="text-white text-sm font-semibold">
+                <span className="text-black font-cinzel text-sm font-semibold">
                   RS {item.price}
                 </span>
                 {/* <span className="text-sm px-4 py-1 border border-gray-300 rounded-xl">

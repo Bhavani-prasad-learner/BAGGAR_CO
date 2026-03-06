@@ -72,18 +72,32 @@ const Popular = ({ type, onMenuClick, selectedItem }) => {
   return (<>
     {/* <section className="relative pb-10 bg-[#FFFFF] text-white"> */}
 
-          <section id="Recommendations" className="relative mb-2 bg-brand-mesh rounded-[2rem] pt-8 pb-8 text-white ">
+          <section id="Recommendations" className="relative mb-2 bg-brand-mesh rounded-[2rem] pt-8 pb-8 ">
       <div className="flex flex-col items-center justify-center">
-        <h2 className="text-[2.4rem] md:text-7xl lobster-regular mb-4 whitespace-nowrap">
-                 <span className="font-cinzel">popular dishes</span>
-        </h2>
+         
+        <div className="flex flex-col items-center justify-center text-center mb-4">
+  
+  <h2 className="text-[2rem] md:text-7xl lobster-regular whitespace-nowrap">
+    <span className="font-cinzel text-yellow-300">
+      Popular Dishes
+    </span>
+  </h2>
+
+  <img
+    src="./border_p.png"
+    alt="bottom border line"
+    className="w-[16rem] md:w-[34rem] object-contain m"
+  />
+
+</div>
+        
         {/* <div className="relative w-[92%] h-[79vh] mb-4 rounded overflow-hidden shadow-lg">
 
           <ImageCarousel images={foodmenuItems} switcher={switcher}/>
 
         </div> */}
          {foodSwitch===true?      
-                    <div className="relative w-[100%] h-[max-content] mb-4 rounded flex justify-center" style={{ touchAction: "pan-y" }}>
+                    <div className="relative w-[100%] h-[max-content]  rounded flex justify-center" style={{ touchAction: "pan-y" }}>
                     {/* <ImageCarousel
                                  key={foodSwitch ? 'food' : 'drink'}
 
@@ -92,7 +106,7 @@ const Popular = ({ type, onMenuClick, selectedItem }) => {
                      <FoodCardSlider images={foodmenuItems} />
                   </div>
                   : 
-                  <div className="relative w-[100%] h-[79vh] mb-4 rounded overflow-hidden shadow-lg" style={{ touchAction: "pan-y" }}>
+                  <div className="relative w-[100%] h-[79vh]  rounded overflow-hidden shadow-lg" style={{ touchAction: "pan-y" }}>
                     <ImageCarousel 
                                  key={foodSwitch ? 'food' : 'drink'}
 

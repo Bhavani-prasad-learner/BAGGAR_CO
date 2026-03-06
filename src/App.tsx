@@ -267,7 +267,7 @@ const AppContent = () => {
 
             <button
 
-          className="w-8 h-8 md:right-12 z-40 flex items-center justify-center p-1 text-yellow-600 border border-yellow-600 rounded-full transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
+          className="w-8 h-8 md:right-12 bg-brand-mesh z-40 flex items-center justify-center p-1 text-yellow-600 border border-yellow-600 rounded-full transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
 
               aria-label="Profile menu"
             >
@@ -369,7 +369,7 @@ const AppContent = () => {
             <motion.div
               key="button"
               ref={button}
-              className={styles.headerButtonContainer}
+              className={`${styles.headerButtonContainer} bg-brand-mesh backdrop-blur-md`} 
               // style={{ overflow: "hidden" }}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 0.8 }}
@@ -421,13 +421,13 @@ const AppContent = () => {
       </div>
 
 
-      <div className="flex absolute right-0 ">
+      <div className="flex absolute right-0 b ">
         <AnimatePresence>
           {isHeaderActive && (
             <motion.div
               key="button"
               ref={button}
-              className={styles.headerButtonContainer}
+              className={`${styles.headerButtonContainer} bg-brand-mesh backdrop-blur-md`} 
               // style={{ overflow: "hidden" }}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 0.8 }}
@@ -585,18 +585,21 @@ const App = () => {
   return (
 
     <QueryClientProvider client={queryClient}>
-
+      <div className=" bg-brand-mesh">
       <TooltipProvider>
         <AuthProvider>
           <CartProvider>
             <BrowserRouter>
               <FlavourProvider>
-                <AppContent />
+                
+                  <AppContent />
+                
               </FlavourProvider>
             </BrowserRouter>
           </CartProvider>
         </AuthProvider>
       </TooltipProvider>
+      </div>
     </QueryClientProvider>
 
   );

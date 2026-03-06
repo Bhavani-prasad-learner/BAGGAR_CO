@@ -22,7 +22,7 @@ const RatingComponent = ({ setter, userRating, userLiked }) => {
         ease: "easeInOut"
       }}
 
-      className='pt-2 pb-2 pl-5 pr-5 mb-2 border border-gray-700 rounded-2xl'
+      className='pt-2 pb-2 pl-5 pr-5 mb-2 border border-yellow-100 rounded-2xl'
     >
       <div className='flex justify-between'>
         <div>
@@ -32,7 +32,7 @@ const RatingComponent = ({ setter, userRating, userLiked }) => {
             {[1, 2, 3, 4, 5].map((star) => (
               <GoStar
                 key={star}
-                className={`text-2xl md:text-4xl cursor-pointer transition-all duration-200 ${(hovered || rating) >= star ? 'text-yellow-400' : 'text-gray-700'
+                className={`text-2xl md:text-4xl cursor-pointer transition-all duration-200 ${(hovered || rating) >= star ? 'text-yellow-600' : 'text-yellow-50'
                   }`}
                 onMouseEnter={() => setHovered(star)}
                 onMouseLeave={() => setHovered(0)}
@@ -42,7 +42,7 @@ const RatingComponent = ({ setter, userRating, userLiked }) => {
           </div>
 
           {rating > 0 && (
-            <div className="text-xs md:text-sm mt-2 md:mt-4 text-gray-700">You rated this {rating} star{rating > 1 ? 's' : ''}.</div>
+            <div className="text-xs md:text-sm mt-2 md:mt-4 text-gray-200">You rated this {rating} star{rating > 1 ? 's' : ''}.</div>
           )}
         </div>
         {rating> 0&& (<div className='flex items-center'>

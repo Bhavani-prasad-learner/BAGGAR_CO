@@ -24,6 +24,9 @@
   
 }
 
+body {
+  @apply bg-white min-h-screen;
+}
 
 
 

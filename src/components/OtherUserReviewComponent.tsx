@@ -11,14 +11,14 @@ const OtherUserReviewComponent = ({ userData }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4, ease: 'easeInOut' }}
-            className="flex flex-col gap-5 h-54 pt-4 pb-4 px-5 mb-6 border border-gray-700 rounded-2xl overflow-auto"
+            className="flex flex-col gap-5 h-54 pt-4 pb-4 px-5 mb-6 border border-gray-200 rounded-2xl overflow-auto"
         >
 
             {userData.length>0 ? userData.map((value,index)=>(
-            <div className='flex justify-between' key={index} >
+            <div className='flex justify-between font-lora' key={index} >
                 <div>
                     <div className="text-sm md:text-lg text-[rgb(255,89,0)] mb-1">{value.name || 'Anonymous'}</div>
-                    <div className="text-sm md:text-lg text-gray-500 mb-2 whitespace-pre-wrap">{value.review}</div>
+                    <div className="text-sm md:text-lg text-gray-200 mb-2 whitespace-pre-wrap">{value.review}</div>
 
                     {value.rating !== undefined && (
                         <div className="text-xs md:text-sm text-gray-400">
@@ -37,7 +37,7 @@ const OtherUserReviewComponent = ({ userData }) => {
             </div>
             )):
             (
-                <div className='flex justfy-center items-center text-sm text-gray-500 '>
+                <div className='flex justfy-center font-lora items-center text-sm text-gray-200 '>
                     No reviews found.
                 </div>
             )

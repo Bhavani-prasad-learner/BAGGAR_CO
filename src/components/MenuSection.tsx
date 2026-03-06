@@ -139,7 +139,7 @@ const MenuSection = ({ type, onMenuClick, selectedItem, setIsSearchActive }: Men
                 className="w-16 md:w-28 object-contain"
               /> */}
               
-              <span className="text-3xl md:text-5xl font-bold tracking-wide whitespace-nowrap font-cinzel text-[#d4af37]">
+              <span className="text-3xl md:text-5xl font-bold tracking-wide whitespace-nowrap font-cinzel text-yellow-400">
                 Our Menu
               </span>
               
@@ -155,7 +155,7 @@ const MenuSection = ({ type, onMenuClick, selectedItem, setIsSearchActive }: Men
             {/* 3. The bottom border image will now sit naturally below the text */}
             <div className="flex justify-center w-full">
               <img 
-                src="./border_2.png" 
+                src="./border_p.png" 
                 alt="bottom border line" 
                 className="w-48 md:w-80 object-contain" // Adjust widths here as needed
               />

@@ -82,7 +82,7 @@ export default function ProxyFlavourForm({ setUserProfile }) {
                     key={i}
                     onClick={() => handleOptionSelect(opt.effects)}
                     className={`flex items-center gap-4 p-4 rounded-xl transition
-                    ${selected ? " border border-orange-400 text-white" : "bg-[#2E2E2E]"}
+                    ${selected ? " border border-orange-400 text-white" : "bg-[#011e01] "}
                   `}
                   >
                     <span className="text-2xl">{opt.emoji}</span>
@@ -99,7 +99,7 @@ export default function ProxyFlavourForm({ setUserProfile }) {
             <button
               onClick={handlePrev}
               disabled={step === 0}
-              className="px-4 py-2 rounded-lg bg-[#2E2E2E] text-white disabled:opacity-30"
+              className="px-4 py-2 rounded-lg bg-[#011e01] text-white disabled:opacity-30"
             >
               Back
             </button>
@@ -107,7 +107,7 @@ export default function ProxyFlavourForm({ setUserProfile }) {
             <button
               onClick={handleNext}
               disabled={!answers[step]}
-              className="px-6 py-2 rounded-lg bg-[#2E2E2E] text-white disabled:opacity-40"
+              className="px-6 py-2 rounded-lg bg-[#011e01] text-white disabled:opacity-40"
             >
               {step === flavourQuestions.length - 1 ? "Finish" : "Next"}
             </button>

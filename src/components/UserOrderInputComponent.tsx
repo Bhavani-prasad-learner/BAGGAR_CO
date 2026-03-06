@@ -48,22 +48,22 @@ const UserOrderInputComponent = ({ setter, userOrders, itemName, itemPrice, item
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="flex justify-between pt-4 pb-4 px-5 mb-10 border border-gray-300 rounded-2xl"
+      className="flex font-lora justify-between pt-4 pb-4 px-5 mb-10 border border-gray-200 rounded-2xl"
     >
       <div>
-        <div className="text-sm md:text-xl -mb-5">Enter number of orders:</div>
+        <div className="text-sm md:text-xl text-stone-100 -mb-5">Enter number of orders:</div>
 
         <input
           type="text"
           inputMode="numeric"
-          className="w-full p-2 rounded-md text-sm md:text-lg bg-transparent text-black placeholder-gray-500 focus:outline-none"
+          className="w-full p-2 rounded-md text-sm md:text-lg bg-transparent text-yellow-100 placeholder-gray-500 focus:outline-none"
           placeholder="e.g., 10"
           value={parseInt(orders?.toString() || "0")}
           onChange={handleChange}
         />
         <div className='flex justify-between'>
         
-            <div className="text-xs md:text-sm mt-2 text-gray-400">
+            <div className="text-xs md:text-sm mt-2 text-yellow-50">
               Added {orders} order{orders !=='1' ? 's' : ''} to the cart.
             </div>
        
@@ -73,10 +73,10 @@ const UserOrderInputComponent = ({ setter, userOrders, itemName, itemPrice, item
       <div className='flex flex-col items-center gap-1 justify-center'>
          <div className='flex justify-center gap-2'>
            <div className='pt-2 pb-2 pl-2 pr-2 border border-gray-500 rounded-lg mr-2'  onClick={decrementOrders}>
-          <FaMinus className='text-black text-sm' />
+          <FaMinus className='text-yellow-100 text-sm' />
           </div>
           <div className='pt-2 pb-2 pl-2 pr-2 border border-gray-500 rounded-lg' onClick={incrementOrders}>
-          <FaPlus className='text-black text-sm'  />
+          <FaPlus className='text-yellow-100 text-sm'  />
           </div>
          
         </div>

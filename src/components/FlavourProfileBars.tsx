@@ -18,17 +18,17 @@ const FlavourProfileBars = ({ profile, chefInfo, calInfo }) => {
       transition={{ duration: 0.4, ease: 'easeInOut' }}
       className="p-5 mb-10 border border-gray-700 rounded-2xl text-white"
     >
-      <div className='flex justify-between'>
-        <h2 className="text-lg md:text-xl mb-4 font-bold">Flavour Profile</h2>
-        <span className='mt-1.5 text-sm md:text-lg text-gray-500'>{calInfo}</span>
+      <div className='flex justify-between font-cinzel'>
+        <h2 className="text-lg md:text-xl mb-4 font-bold ">Flavour Profile</h2>
+        <span className='mt-1.5 text-sm md:text-lg text-gray-500 '>{calInfo}</span>
       </div>
 
-      <div className="space-y-4">
+      <div className=" font-lorafont-lora space-y-4">
         {Object.entries(profile).map(([key, value]) => (
           <div key={key}>
             <div className="flex justify-between mb-1 font-semibold text-sm md:text-lg text-white capitalize">
               <span>{key}</span>
-              <div className='flex flex-row gap-2'>
+              <div className='flex flex-row  gap-2'>
                 <label className={`block mb-2 font-semibold tracking-wider font-bold`} style={{ color: getColor(value) }} >
                   {(() => {
                     const labels = {

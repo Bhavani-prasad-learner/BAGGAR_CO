@@ -115,10 +115,10 @@ const Recommendations = ({ type, onMenuClick, selectedItem }) => {
   return (<>
 
     {/* <section id="Recommendations" className="relative mb-10 bg-[#0C0B09] text-white"> */}
-    <section id="Recommendations" className="relative mb-10 bg-brand-mesh rounded-[2rem] pt-8 pb-8 text-white ">
+    <section id="Recommendations" className="relative mb-10 bg-brand-mesh  rounded-[2rem] pt-8 pb-8 text-white ">
 
-      <div className="flex flex-col items-center justify-center">
-        <h2 className="text-[2.4rem] md:text-7xl mb-4 whitespace-nowrap lobster-regular">
+      <div className="flex flex-col items-center  font-lora justify-center">
+        <h2 className="text-[1.8rem] text- md:text-3xl mb-4 whitespace-nowrap font-cinzel">
           recommendations
         </h2>
 
@@ -168,7 +168,7 @@ const Recommendations = ({ type, onMenuClick, selectedItem }) => {
 
 
           (foodSwitch === true ?
-            <div className="relative w-[100%] h-[max-content] mb-4 rounded overflow-hidden" style={{ touchAction: "pan-y" }} >
+            <div className="relative w-[100%] h-[max-content] mb-4  rounded overflow-hidden" style={{ touchAction: "pan-y" }} >
               {/* <ImageCarousel 
              key={foodSwitch ? 'food' : 'drink'}
             images={foodmenuItems} switcher={switcher} foodSwitch={foodSwitch} /> */}
@@ -194,7 +194,7 @@ const Recommendations = ({ type, onMenuClick, selectedItem }) => {
         {foodmenuItems.length !== 0 ?
           (<div onClick={() => setUserProfile(null)}
 
-            className="w-[fit-content] flex gap-2 items-center px-4 py-1 text-lg text-white bg-[#2E2E2E]  rounded-xl flex justify-center">
+            className="w-[fit-content] flex gap-2 items-center px-4 py-1 text-lg text-white bg-[#022c02]  rounded-xl flex justify-center">
             <MdOutlineRefresh className="text-lg"/> <span>reset recommendations</span>
           </div>)
           : null}
