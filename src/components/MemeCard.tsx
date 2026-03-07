@@ -200,7 +200,7 @@ const MemeCard = ({ scrollContainerRef, itemName, lowpicPath, HighpicPath, price
   }
 
   return (<div className='flex-column'>
-    <div className="w-100vw justiify-center items-center mb-0 bg-brand-mesh-premium overflow-hidden rounded-[1.2rem] px-1 py-2 md:py-4">
+    <div className="w-100vw justiify-center items-center mb-0 bg-[#011d20] overflow-hidden rounded-[1.2rem] px-1 py-2 md:py-4">
       <div className='flex justify-between items-center block pb-2 gap-6'>
         <span className='pl-2 cormorant_garamond-regular text-white font-bold text-xl max-w-[95%] md:text-4xl md:pl-4' >{itemName}</span>
         <div className='flex flex-row justify-center items-center mr-2 md:mr-4 w-20 min-w-fit pl-2 pr-2 md:py-8 md:pl-4 md:pr-4 gap-1  h-10 rounded-xl'>

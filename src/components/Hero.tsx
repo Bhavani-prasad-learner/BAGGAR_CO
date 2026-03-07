@@ -18,6 +18,7 @@ const Hero: React.FC = () => {
     /* The main container uses the new premium mesh background */
     <div className="relative flex items-center justify-center overflow-hidden min-h-[70vh] bg-brand-mesh-premium">
       
+      
       {/* The SVG Noise Texture layered directly in the component.
          We use inline styles here because long SVG strings can break Tailwind's compiler. 
       */}

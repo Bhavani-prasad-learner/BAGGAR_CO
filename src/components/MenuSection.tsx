@@ -28,15 +28,14 @@ interface MenuSectionProps {
 
 const MenuSection = ({ type, onMenuClick, selectedItem, setIsSearchActive }: MenuSectionProps) => {
   const menuItems: MenuItem[] = [
-    { id: 1, name: "Salads", price: 129, diet: ["veg", "vegan"], category: ["starters"], allergens: ["gluten-free", "dairy-free"] },
-    { id: 2, name: "Classic Shawarma", price: 200, diet: ["non-veg"], category: ["mains"], allergens: ["nut-free"] },
-    { id: 3, name: "Signature Shawarma", price: 150, diet: ["non-veg"], category: ["mains"], special: ["chef's specials"] },
-    { id: 4, name: "Kababs Shawarma", price: 120, diet: ["non-veg"], category: ["mains"] },
-    { id: 5, name: "Veg Shawarma", price: 119, diet: ["veg"], category: ["mains"], special: ["best sellers"] },
-    { id: 6, name: "Sandwich", price: 99, diet: ["veg"], category: ["starters"], allergens: ["nut-free"] },
-    { id: 7, name: "Quick Bites", price: 99, diet: ["veg"], category: ["starters"] },
-    { id: 9, name: "Mojitos", price: 79, diet: ["veg", "vegan"], category: ["beverages"], allergens: ["gluten-free", "dairy-free"] }
+      { id: 1, name: "veg currys with pulao's", price:259, diet: ["veg", "vegan"], category: ["mains"], allergens: ["gluten-free", "dairy-free"] },
+    { id: 2, name: "veg curries", price: 119, diet: ["veg"], category: ["mains"], special: ["best sellers"] },
+    { id: 5, name: "non-veg curries", price: 229, diet: ["non-veg"], category: ["mains"], allergens: ["nut-free"] },
+    { id: 3, name: "pulao's with iguru", price: 109, diet: ["non-veg"], category: ["mains"], special: ["chef's specials"] },
+    { id: 4, name: "family & jumbo packs", price: 699, diet: ["non-veg"], category: ["mains"] },
   ];
+
+    
 
   // --- STATE ---
   const [isFirstClicked, setIsFirstClicked] = useState(false);
@@ -243,8 +242,8 @@ const MenuSection = ({ type, onMenuClick, selectedItem, setIsSearchActive }: Men
                       viewport={{ once: true, amount: 0.7 }} 
                       className="flex items-center justify-between"
                     >
-                      <h3 className="text-2xl cormorant_garamond-regular tracking-wide transition ease-in-out duration-300 ">
-                        <span className="text-3xl md:text-6xl text-white tracking-wide mb-2 whitespace-nowrap">
+                      <h3 className="text-2xl font-lora transition ease-in-out duration-300 ">
+                        <span className="text-3xl md:text-6xl text-white  mb-2 whitespace-nowrap">
                           {item.name}
                         </span>
                       </h3>

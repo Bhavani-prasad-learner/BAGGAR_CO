@@ -24,40 +24,42 @@ const Popular = ({ type, onMenuClick, selectedItem }) => {
   const switcher = (switchState) =>{
     setFoodSwitch(switchState)
   }
-  const foodmenuItems = [
-    { id: 1, itemName: "Regular Rumali Chicken Shawarma",price: "119",
-    picPath: "/webp/regular-rumali-chicken-shawarma.webp",
-    calInfo: "350-450 kcal",
-    chefInfo: "Tender grilled chicken wrapped in soft rumali roti with a balanced mix of veggies and creamy garlic mayo."
-   },
-//     { id: 2, itemName: "BLACK BERRY NOIRE", price: 250, type: "yours",      chefInfo: "Chocolate crepe with warm velvety nutella fresh blackberries and vanilla bean ice cream.",
-//   picPath: "/webp2/black-noire.webp", lowpicPath:"/webp2/black-noire (1).webp" },
-//         { id: 3, itemName: "BERRY KISSED VELVET", price: 295, type: "yours",      
-//           chefInfo: "red velvet crepe embraced with layers of vanilla spone and delight cream crowned with freshly seasoned berries.",
-//  picPath: "/webp2/red-velvet.webp", lowpicPath:"/webp2/red-velvet (1).webp" },
-//     { id: 3, itemName: "Strawberry Matcha",     chefInfo: "This homemade tomato basil soup Made with fresh basil and roasted tomatoes, it's lightly creamy and delicious",
-// price: 250, type: "yours", picPath: "/webp2/strawberry-matcha.webp", lowpicPath:"/webp2/strawberry-matcha (1).webp"},
+const foodmenuItems = [
 
-
-    { id: 4, itemName: "Kababs Shawarma", price: 149, type: "spicy", picPath: "/webp/resmi-kabab-shawarma.webp",  chefInfo: "Juicy and soft reshmi kabab pieces blended with cream-based marinade, wrapped in rumali roti with veggies and mild sauces."
- },
-     { id:10,
-      itemName: "Falafel Salad", price: "129", picPath: "/webp/salad-2.webp",
-      calInfo: "300-420 kcal",
-      chefInfo: "2 Pcs Falafel + Lettuce, capsicum, onion, cucumber, tomatoes and shredded carrots and beetroot mixed with our flavourful seasoning sauce, special in-house garlic mayonnaise."
-    },
-    { id:5,
-    itemName: "Classic Paneer Sandwich",
-    price: "129",
-    picPath: "/webp/classic-paneer-sandwich.webp",
-    chefInfo: "Our classic paneer sandwich is made with freshly marinated paneer, layered with crisp veggies and house-made chutney, then toasted between buttery golden bread.",
-    calInfo: "280–370 kcal"
+  {
+    id: 11,
+    itemName: "Chicken Curry",
+    price: "229",
+    picPath: "/webp3/chicken_curry.webp",
+    calInfo: "420-520 kcal",
+    chefInfo:
+      "Traditional Andhra-style chicken curry slow-cooked with onions, tomatoes, and aromatic spices, creating a rich and flavorful gravy."
   },
-  ];
+
+  {
+    id: 12,
+    itemName: "Mutton Biryani",
+    price: "299",
+    picPath: "/webp3/mutton_biryani.webp",
+    calInfo: "600-750 kcal",
+    chefInfo:
+      "Authentic dum-cooked mutton biryani made with fragrant basmati rice, tender mutton pieces, and a blend of traditional spices."
+  },
+
+  {
+    id: 13,
+    itemName: "Mushroom Curry",
+    price: "199",
+    picPath: "/webp3/mushroom_curry.webp",
+    calInfo: "300-380 kcal",
+    chefInfo:
+      "Fresh mushrooms simmered in a rich onion-tomato masala gravy with mild spices, delivering a hearty and earthy flavor."
+  }
+
+];
 
   const drinkenuItems = [
      { id: 9, itemName: "Samosa with Chai", price: 79, type: "yours", picPath: "/webp2/SamosaWithChai.webp" },
-        { id: 9, itemName: "Straw Berry Mojito", price: 79, type: "yours", picPath: "/webp/straw-berry-mojito.webp" }
   ]
 
 

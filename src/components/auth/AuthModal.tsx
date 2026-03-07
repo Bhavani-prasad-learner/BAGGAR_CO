@@ -183,16 +183,16 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
             <X size={18} />
           </button>
 
-          <div className="auth-modal-content bg-[#021f14]" >
-            <img src='./webp2/bg-loginImg.webp' alt="auth-bg" className='opacity-[1] overflow-hidden w-[30rem] h-[20rem] object-cover' />
+          <div className="auth-modal-content  bg-[#021f14]" >
+            <img src='./webp3/login.webp' alt="auth-bg" className='opacity-[1] overflow-hidden w-[30rem] h-[20rem] object-cover' />
           </div>
 
           <div className=' bg-[#02291ad5] flex flex-col gap-3 py-10 border-t border-black/20'>
             <div className="mt-0 pt-0" />
-            <span className='text-white text-center text-xl'>
+            <span className='text-white font-lora text-center text-xl'>
               Sign in with Gmail
             </span>
-            <span className='text-white/65 text-center text-sm'>
+            <span className='text-white/65 font-lora text-center text-sm'>
               Join us in seconds — no password needed.
             </span>
           </div>
@@ -202,7 +202,7 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
      
           <div 
           onClick={handleGoogleSignIn}
-          className='h-12 w-14 absolute top-[53%] right-[40%] z-[100] text-4xl text-white rounded-2xl  bg-[#02291ad5]  flex items-center justify-center'>
+          className='h-12 w-14  absolute top-[53%] right-[40%] z-[100] text-4xl text-white rounded-2xl  bg-[#02291ad5]  flex items-center justify-center'>
             <CiLogin />
 
           </div>
@@ -215,7 +215,7 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
               type="button"
             >
   
-              <span className="google-btn-text ">sign in</span>
+              <span className="google-btn-text font-cinzel ">sign in</span>
             </button>
 
           </div>
