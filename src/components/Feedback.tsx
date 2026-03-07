@@ -3,8 +3,14 @@ import { motion } from "framer-motion"
 const Feedback = () => {
 
     return (
-        <div className="flex flex-col relative h-[fit-content] w-full overflow-hidden mb-10  bg-brand-mesh ">
-            <div className="ml-5 flex items-center font-medium text-restaurant-primary">
+        <div className="flex flex-col mt-7 relative h-[fit-content] w-full overflow-hidden    ">
+            <div 
+        className="absolute inset-0 opacity-[0.12] mix-blend-overlay pointer-events-none"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.50' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
+        }}
+      ></div>
+            <div className="ml-5  flex items-center font-medium text-restaurant-primary">
                 <span
                 
                 className="md:text-5xl ">———</span><span
@@ -15,7 +21,7 @@ const Feedback = () => {
                 }}
                 className="text-2xl md:text-5xl tracking-wide lobster-regular ml-5">enjoy your food</span>
             </div>
-            <motion.div
+            {/* <motion.div
                 animate={{ x: [170], y: [180], rotate: [20, 4, 20] }}
                 transition={{
                     y: {
@@ -33,8 +39,8 @@ const Feedback = () => {
                 }}
                 className="absolute -top-16 -left-52 w-[150px] h-[150px] transform scale-10 opacity-30 rotate-180">
                 <img src="./webp/bg-parsley.webp" />
-            </motion.div>
-            <motion.div
+            </motion.div> */}
+            {/* <motion.div
                 animate={{ x: [170], y: [180], rotate: [-150, -134, -150] }}
                 transition={{
                     y: {
@@ -52,8 +58,8 @@ const Feedback = () => {
                 }}
                 className="absolute -top-48 left-28 w-[100px] h-[100px] transform scale-1 opacity-35 rotate-180">
                 <img src="./webp/bg-parsley.webp" />
-            </motion.div>
-            <div className="flex flex-col justify-center font-lora items-center gap-3 p-5 -mt-12 text-center">
+            </motion.div> */}
+            <div className="flex flex-col justify-center font-lora items-center gap-3 p-5 pb-11 -mt-12 text-center">
                 <div className="flex justify-center  w-full mt-10 scale-[0.7]">
                     <div className="flex items-center bg-white shadow-md px-4 py-5 pr-12 w-fit space-x-4">
                         {/* Rating Number */}

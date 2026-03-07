@@ -303,7 +303,7 @@ const AppContent = () => {
 
         <button
           onClick={() => setIsAuthModalOpen(true)}
-          className="w-8 h-8 md:right-12 z-40 flex items-center justify-center p-1 text-yellow-600 border border-yellow-600 rounded-full transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
+          className="w-8 h-8 md:right-12 z-40 flex items-center justify-center p-1 text-yellow-400 border border-yellow-400 rounded-full transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
           // style={{ width: '48px', height: '48px' }}
           aria-label="Login or Sign Up"
         >
@@ -363,7 +363,7 @@ const AppContent = () => {
       {/* Global Order Notifications */}
       <GlobalOrderNotifications />
 
-      <div className="flex absolute right-0 bg-brand-mesh">
+      <div className="flex absolute right-0 bg-brand-mesh ">
         <AnimatePresence>
           {isActive && (
             <motion.div
@@ -377,8 +377,8 @@ const AppContent = () => {
               transition={{ duration: 0.3, delay: 0.5 }}
             >
               <div className="flex relative">
-                <div className=" text-center">
-                  <h2 className="text-[2rem] text-white bg- md:text-[2.5rem] font-lora tracking-wide mb-4 mt-[0.8rem] whitespace-nowrap">
+                <div className=" text-center  text-white">
+                  <h2 className="text-[1.2rem]  font-cinzel text-white  md:text-[1.4rem]  tracking-wide mb-2 mt-[0.8rem] whitespace-nowrap">
                     {selectedItem}
                   </h2>
                 </div>

@@ -73,7 +73,7 @@ const Index = ({ setIsNavOpen, setItem, setIsSearchActive,setIsFiltersModalOpen,
 
 
       <div className="flex flex-col bg-[#0C0B09] text-white overflow-hidden">
-        <main className="flex-grow bg-[#0C0B09] data-scroll-container ">
+        <main className="flex-grow bg-brand-mesh-premium data-scroll-container ">
           <Hero />
 
 

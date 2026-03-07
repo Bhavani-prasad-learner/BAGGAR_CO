@@ -74,7 +74,7 @@ const foodmenuItems = [
   return (<>
     {/* <section className="relative pb-10 bg-[#FFFFF] text-white"> */}
 
-          <section id="Recommendations" className="relative mb-2 bg-brand-mesh rounded-[2rem] pt-8 pb-8 ">
+          <section id="Recommendations" className="relative mb-2 bg-sub-brand rounded-[2rem] pt-8 pb-8 ">
       <div className="flex flex-col items-center justify-center">
          
         <div className="flex flex-col items-center justify-center text-center mb-4">

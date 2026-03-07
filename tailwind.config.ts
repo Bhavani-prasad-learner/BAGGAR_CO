@@ -33,6 +33,7 @@ export default {
       },
       // 2. MERGED ALL COLORS INTO ONE BLOCK
       colors: {
+        'sub-brand': 'var(--brand-g-2)',
         
         
         border: 'hsl(var(--border))',

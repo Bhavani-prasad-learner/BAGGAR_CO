@@ -11,6 +11,8 @@
   --brand-second-green-3: #1e342e;
   --brand-second-green-2: #266e5c ; /* Slightly cooler */
   --brand-second-green-1: #2c5c4e;
+
+  --brand-g-2:#0a96707a;
   
 
  
@@ -19,13 +21,25 @@
   --brand-gold-base: #b38728;   /* The main body color */
   --brand-gold-light: #fbf5b7;  /* Soft reflection */
   --brand-gold-shine: #fcf6ba;  /* The brightest metallic gleam */
-
+  --brand-mesh: radial-gradient(
+    circle at 50% 0%, 
+    var(--brand-second-green-3) 30%, 
+    transparent 75%
+  ),
+  linear-gradient(
+    to bottom, 
+    var(--brand-second-green-1) 0%, 
+    var(--brand-second-green-2) 100%
+  );
 
   
 }
 
 body {
-  @apply bg-white min-h-screen;
+  background: var(--brand-mesh);
+
+  /* ensures full page coverage */
+  min-height: 100vh;
 }
 
 
@@ -83,6 +97,12 @@ body {
   font-display: swap;
 }
 
+.body {
+  background: var(--brand-mesh);
+
+  /* ensures full page coverage */
+  min-height: 100vh;
+}
 
 .fugazone-regular{
   font-family: "FugazOne", cursive;

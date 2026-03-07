@@ -57,6 +57,44 @@ const navItems = {
       calInfo: "600–750 kcal"
     },
   ],
+  'family & jumbo packs': [
+   {
+      itemName: "Mutton Biryani (Jumbo Pack)",
+      price: "899",
+      lowpicpath: "/webp3/mutton_biryani(1).webp",
+      picPath: "/webp3/mutton_biryani.webp",
+      itemRating: "5",
+      flavourProfile: {
+        spiciness: 4,
+        sourness: 1,
+        sweetness: 1,
+        creaminess: 2,
+        crunchiness: 1,
+        earthiness: 4,
+        umami: 5,
+      },
+      chefInfo: "Traditional dum-cooked basmati rice layered with tender mutton and aromatic spices.",
+      calInfo: "600–750 kcal"
+    },
+     {
+      itemName: "Chicken Drumstick Pulao (Family Pack)",
+      price: "699",
+      lowpicpath: "/webp3/chicken_pulao(1).webp",
+      picPath: "/webp3/chicken_pulao.webp",
+      itemRating: "4",
+      flavourProfile: {
+        spiciness: 4,
+        sourness: 1,
+        sweetness: 1,
+        creaminess: 2,
+        crunchiness: 1,
+        earthiness: 3,
+        umami: 4,
+      },
+      chefInfo: "Flavorful pulao cooked with juicy chicken drumsticks and fragrant spices.",
+      calInfo: "540–680 kcal"
+    },
+  ],
 
   "veg currys with pulao's": [
     

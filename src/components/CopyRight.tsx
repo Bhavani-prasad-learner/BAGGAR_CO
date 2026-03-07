@@ -5,7 +5,8 @@ const CopyRight = () => {
   const year = new Date().getFullYear();
 
   return (
-    <div style={{backgroundColor:'[#0C0B09]'}} className="bg-brand-mesh-premium h-100 gap-5 p-12 flex flex-col vedic-border-y rounded-[2rem] items-center justify-center text-center text-sm text-gray-400 w-full z-[20] -mt-10">
+    <div className="bg-brand-mesh-premium">
+    <div  className="bg-brand-mesh-premium h-100 gap-5 p-12 flex flex-col vedic-border-y rounded-[2rem] items-center justify-center text-center text-sm text-gray-400 w-full z-[20] -mt-10">
       
     <span className="text-white text-[1.4rem] md:text-[4rem] md:mt-5 fugazone-regular ">
       
@@ -18,6 +19,7 @@ const CopyRight = () => {
         </div>
    
       <p className="md:text-xl text-[#DFBA6B] font-cinzel">&copy; {year} BAGAARA & CO. <br/><span className="underline md:text-xl font-lora">All rights reserved.</span></p> 
+    </div>
     </div>
   );
 };

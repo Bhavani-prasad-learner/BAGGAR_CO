@@ -97,7 +97,7 @@ export default function FiltersModal({
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 bg-black/50 flex items-center justify-center z-[100]"
+        className="fixed inset-0  flex items-center justify-center z-[100]"
         variants={backdropVariants}
         initial="hidden"
         animate="visible"
